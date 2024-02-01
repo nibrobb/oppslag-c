@@ -2,6 +2,7 @@
 
 ## Quick start
 
+To use this project you need an API-key for the vehicle lookup service, which you may apply for [here](https://www.vegvesen.no/kjoretoy/kjop-og-salg/kjoretoyopplysninger/api-er-for-tekniske-kjoretoyopplysninger/api-for-tekniske-kjoretoyopplysninger/)
 Dependencies include `gcc` and `libcurl-dev`
 
 To install libcurl on Ubuntu 22.04 LTS
