@@ -2,10 +2,13 @@
 
 ## Quick start
 
-To use this project you need an API-key for the vehicle lookup service, which you may apply for [here](https://www.vegvesen.no/kjoretoy/kjop-og-salg/kjoretoyopplysninger/api-er-for-tekniske-kjoretoyopplysninger/api-for-tekniske-kjoretoyopplysninger/)
+**Note: only available for Norwegian citizens.**
+
+To use this project you need an API-key from the Norwegian Road Authority (Statens Vegvesen) vehicle lookup service, which you may apply for [here](https://www.vegvesen.no/kjoretoy/kjop-og-salg/kjoretoyopplysninger/api-er-for-tekniske-kjoretoyopplysninger/api-for-tekniske-kjoretoyopplysninger/). 
+
 Dependencies include `gcc` and `libcurl-dev`
 
-To install libcurl on Ubuntu 22.04 LTS
+To install dependencies on Ubuntu 22.04 LTS
 ```bash
 sudo apt install gcc make libcurl4-openssl-dev
 ```
