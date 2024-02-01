@@ -10,7 +10,7 @@ Dependencies include `gcc` and `libcurl-dev`
 
 To install dependencies on Ubuntu 22.04 LTS
 ```bash
-sudo apt install gcc make libcurl4-openssl-dev
+sudo apt install gcc libcurl4-openssl-dev
 ```
 
 ## Running
