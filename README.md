@@ -13,8 +13,13 @@ To install dependencies on Ubuntu 22.04 LTS
 sudo apt install gcc jq libcurl4-openssl-dev
 ```
 
-## Running
-Oppslag may be run with the license plate as a commandline argument
+## Compile and run
+Simply compile with the included build-script
+```bash
+./build.sh
+```
+
+The program may be run with the license plate as a commandline argument
 
 ```bash
 ./oppslag [LICENSE PLATE]
