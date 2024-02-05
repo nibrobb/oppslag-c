@@ -7,11 +7,11 @@
 
 #include <curl/curl.h>
 
-#define BUFFER_SIZE 16*1024
+#define BUFFER_SIZE 16*1024UL
 #define MAX_REG_LEN 10UL
 #define JSON_FORMATTER "jq . "
 #define API_HEADER "SVV-Authorization: Apikey "
-#define CMD_LEN 255
+#define CMD_LEN 255UL
 
 #define STR2(X) #X
 #define STR(X) STR2(X)
