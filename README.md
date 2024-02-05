@@ -2,16 +2,24 @@
 
 ## Quick start
 
-To use this project you need an API-key for the vehicle lookup service, which you may apply for [here](https://www.vegvesen.no/kjoretoy/kjop-og-salg/kjoretoyopplysninger/api-er-for-tekniske-kjoretoyopplysninger/api-for-tekniske-kjoretoyopplysninger/)
-Dependencies include `gcc` and `libcurl-dev`
+**Note: only available for Norwegian citizens.**
 
-To install libcurl on Ubuntu 22.04 LTS
+To use this project you need an API-key from the Norwegian Road Authority (Statens Vegvesen) vehicle lookup service, which you may apply for [here](https://www.vegvesen.no/kjoretoy/kjop-og-salg/kjoretoyopplysninger/api-er-for-tekniske-kjoretoyopplysninger/api-for-tekniske-kjoretoyopplysninger/). 
+
+Dependencies include `gcc`, `jq` and `libcurl-dev`
+
+To install dependencies on Ubuntu 22.04 LTS
 ```bash
-sudo apt install gcc make libcurl4-openssl-dev
+sudo apt install gcc jq libcurl4-openssl-dev
 ```
 
-## Running
-Oppslag may be run with the license plate as a commandline argument
+## Compile and run
+Simply compile with the included build-script
+```bash
+./build.sh
+```
+
+The program may be run with the license plate as a commandline argument
 
 ```bash
 ./oppslag [LICENSE PLATE]
