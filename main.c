@@ -8,14 +8,13 @@
 #include <curl/curl.h>
 
 #define BUFFER_SIZE 16*1024
-#define MAX_REG_LEN 10
+#define MAX_REG_LEN 10UL
 #define JSON_FORMATTER "jq . "
 #define API_HEADER "SVV-Authorization: Apikey "
 #define CMD_LEN 255
 
-// size_t write_data(void *ptr, size_t size, size_t nmemb, void *stream) {
-//     return fwrite(ptr, size, nmemb, (FILE *)stream);
-// }
+#define STR2(X) #X
+#define STR(X) STR2(X)
 
 /**
  * Allocates a new string, user's responsibility to free
@@ -44,7 +43,9 @@ int main(int argc, char **argv) {
     if (argc == 2) {
         strncpy(reg, argv[1], MAX_REG_LEN);
     } else {
-        if (scanf("%s", reg) != 1) {
+        char format[5];
+        snprintf(format, sizeof format, "%%%zus", MAX_REG_LEN);
+        if (scanf(format, reg) != 1) {
             perror("scanf");
             fprintf(stderr, "ERROR: %s", strerror(errno));
             exit(EXIT_FAILURE);
@@ -84,7 +85,7 @@ int main(int argc, char **argv) {
     FILE *jq_fp = popen(cmd, "w");
     // free(reg_upper);
     if (jq_fp == NULL) {
-        perror("popen1");
+        perror("popen");
         pclose(jq_fp);
         exit(EXIT_FAILURE);
     }
